@@ -1,0 +1,9 @@
+<table>
+    <tr>
+        <center>
+            {% for entry in site.data.navigation %}
+            <td><a href="{{ site.baseurl }}{{ entry.url }}"><span>{{ entry.title }}</span></a></td>
+            {%endfor %}
+        </center>
+    </tr>
+</table>

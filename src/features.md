@@ -1,0 +1,18 @@
+---
+title: zipline-live
+description: On premise live trading with zipline
+---
+zipline-live currently supports Interactive Brokers API only. With IB you can:
+ - Access your IB portfolio via `context.portfolio`
+ - See the active positions
+ - Create new orders for equities
+ - Access real-time data through `data.current`
+
+## Limitations
+zipline-live is a relatively new project and it is in alpha stage yet.
+The following features are planned, but not yet implemented:
+ - Ability to use `context` variable between application restarts
+ - Order guards
+ - Pipeline API support
+ - Fundamentals data support
+ - Data capture (continuous ingestion)
