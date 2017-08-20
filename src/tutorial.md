@@ -4,18 +4,18 @@ description: On premise live trading with zipline
 ---
 # zipline-live with Interactive Brokers TWS
 ## Install
-Assuming you have [Python 2.7](https://www.python.org/) and [virtualenv](https://virtualenv.pypa.io) installed 
+Assuming you have [Python 2.7](https://www.python.org/) and [virtualenv](https://virtualenv.pypa.io) installed,
 you can install zipline-live using `pip`:
 ```
 virtualenv ~/venv-zipline-live
 source ~/venv-zipline-live/bin/activate
 pip install zipline-live
 ```
-As zipline-live uses the same executable as zipline, the two project cannot be
+As zipline-live uses the same executable as zipline, the two projects cannot be
 simultaneously installed in the same environment. 
 
-## Create simple algorithm
-Save the following demo algorithm which `~/zipline-algos/demo.py` logs
+## Create a simple algorithm
+Save the following code to `~/zipline-algos/demo.py`. This simple algorithm logs
 the VIX prices.
 ```py
 from zipline.api import order, record, symbol
