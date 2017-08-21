@@ -3,3 +3,5 @@ github.repository_url: https://github.com/zipline-live/zipline
 
 theme: jekyll-theme-tactile
 gem "github-pages", group: :jekyll_plugins
+
+google_analytics: UA-105013678-1
