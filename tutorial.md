@@ -53,7 +53,7 @@ Enable API Clients in Configuration API/Settings by setting 'Enable ActiveX and 
 ## Run!
 Start zipline-live with `--broker` and `--broker-uri` specified.
 ```
-zipline run -f ~/zipline-algos/demo.py --broker ib --broker-uri localhost:7496:1232 --bundle quantopian-quandl  --data-frequency minute
+zipline run -f ~/zipline-algos/demo.py --state-file ~/zipline-algos/demo.state --broker ib --broker-uri localhost:7496:1232 --bundle quantopian-quandl  --data-frequency minute
 ```
 ```
 [2017-08-18 15:07:24.850838] INFO: IB Broker: Connecting: localhost:7496:1232
