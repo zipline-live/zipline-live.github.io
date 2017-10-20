@@ -5,7 +5,7 @@ description: On premise live trading with zipline
 # zipline-live with Interactive Brokers TWS
 ## Install
 Assuming you have [Python 2.7](https://www.python.org/) and [virtualenv](https://virtualenv.pypa.io) installed,
-you can install zipline-live using `pip`. If you're using Windows, see [this page](/windows.md) for installation instructions
+you can install zipline-live using `pip`. If you're using Windows, see [this page](/windows.md) for installation instructions.
 ```
 virtualenv ~/venv-zipline-live
 source ~/venv-zipline-live/bin/activate
