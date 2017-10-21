@@ -10,7 +10,7 @@ This tutorial assumes you have a clean Windows installation with Administrator r
 Download and install [Anaconda](https://www.anaconda.com/download/) (Python 2.7).
 
 ## Install Microsoft Visual C++ Compiler for Python 2.7
-Download and install from https://www.microsoft.com/en-us/download/details.aspx?id=44266
+Download and install from [here](https://www.microsoft.com/en-us/download/details.aspx?id=44266)
 
 ## Install zipline-live
 Open up Anaconda Shell and install zipline-live as follows:
@@ -31,6 +31,6 @@ conda install -c quantopian ta-lib
 ```
 
 ## Download and install IB TWS
-Download, install, and configure IB TWS as shown here http://www.zipline-live.io/tutorial
+Download, install, and configure IB TWS as shown [here](/tutorial)
 
 
