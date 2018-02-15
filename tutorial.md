@@ -79,3 +79,12 @@ TWS Time at connection:20170818 11:07:24 EST
 # Extend
 You can extend the demo algorithm to obtain portfolio data or to create orders.
 For the list of supported features please see the [features page](/features).
+
+# Tips for porting an Algo from Quantopian to Zipline-Live
+The most important part is that you have arranged for your data ingestion processes. For most people the Quantopian Quandl package (zipline ingest -b quantopian-quandl) will do but if you need more exotic tickers you have to ingest your own data. There are several datas providers (IB, IEX, IQfeed, Quandl) and Python packages to help you on the way. Connect with the devs on Slack : https://zipline-live.slack.com if you want to discuss this further.
+
+* Move all functions that you need to be called daily from "initialize(context)" to "before_trading_starts(context, data)". This includes schedule_functions, and Fetcher functions. Zipline-live uses a recorded environment (a pickled state file) rather than a backtest-till-today method like Quantopian.
+* As your ingestion not always ingests files and tickers in the same order, do not use sid(int) but symbol(str). As the state-file will remember the assetclass with all references (including sid) it's best to call all assets in before_trading_starts(context, data) with the symbol(str) function. This will prevent the generated sid to be out of sync with your asset database.
+* When designing your algo take in account that initialize only runs once (untill you delete the state file)
+* An algo can crash and it's imperative that you make sure that if the algo is started during the tradingday that it can initialize on it's own and pick up things where it left.
+* Finally: Zipline does not force you to use certain versions of external modules but if you need higher version of modules than zipline supports (eg, pandas, sklearn), please install the modules in an different environment (setenv, docker environments, etc) and communicate through calls or files with the algo. This to prevent unintended behaviour.
