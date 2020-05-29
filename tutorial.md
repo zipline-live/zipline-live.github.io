@@ -76,6 +76,36 @@ TWS Time at connection:20170818 11:07:24 EST
 
 ```
 
+# zipline-live with [Alpaca API](https://alpaca.markets)
+You can run your algorithm for live trading with Alpaca. The steps are similar to Interactive Brokers,
+so here we explain only the difference.
+
+## Install
+[Alpaca Trade API Python SDK](https://pypi.org/project/alpaca-trade-api/) needs to install instead of IBPy.
+On the environment where latest zipline-live is installed,
+
+```
+$ pip install alpaca-trade-api
+```
+
+## API Key
+In order to start trading with Alpaca API, set API key via environment variables. The API key
+can be obtained in your Alpaca account dashboard.
+
+```
+$ export APCA_API_KEY_ID=xxxxx
+$ export APCA_API_SECRET_KEY=yyyyy
+```
+
+## Ingest data
+You need to ingest data the same way as the IB case.
+
+## Run
+Start zipline-live with parameters `--broker=alpaca --broker-uri=''`.  Alpaca does not use `--broker-uri` value but you need to specify it in the command line.
+For the rest of parameters, please see the section above.
+
+
+
 # Extend
 You can extend the demo algorithm to obtain portfolio data or to create orders.
 For the list of supported features please see the [features page](/features).
