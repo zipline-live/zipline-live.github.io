@@ -11,7 +11,6 @@ zipline-live currently supports the Interactive Brokers (IB) API only. With IB y
 ## Limitations
 zipline-live is a relatively new project and it is still in the alpha stage.
 The following features are planned, but not yet implemented:
- - ~~Ability to use `context` variable between application restarts~~
  - Order guards
  - Pipeline API support
  - Fundamentals data support
